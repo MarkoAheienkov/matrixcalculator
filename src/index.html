@@ -7,5 +7,57 @@
     <title>Matrix Calculator</title>
 </head>
 <body>
+    <div class="calculator">
+        <ul class="calculator__operations">
+            <li class="calculator__operation">
+                <h2>Matrix Sum</h2>
+                <div class="calculator__fields">
+                    <textarea id="sum_field_1" class="calculator__textarea" wrap='off'></textarea>
+                    <span>+</span>
+                    <textarea id="sum_field_2" class="calculator__textarea" wrap='off'></textarea>
+                </div>
+                <button data-operation="SUM" class="calculator__btn">Calculate</button>
+                <div class="calculator__result">
+                    <textarea readonly id="sum_result" class="calculator__textarea__result" wrap='off'></textarea>
+                </div>
+            </li>
+            <li class="calculator__operation">
+                <h2>Matrix Subtract</h2>
+                <div class="calculator__fields">
+                    <textarea id="subtract_field_1" class="calculator__textarea" wrap='off'></textarea>
+                    <span>-</span>
+                    <textarea id="subtract_field_2" class="calculator__textarea" wrap='off'></textarea>
+                </div>
+                <button data-operation="SUBTRACT" class="calculator__btn">Calculate</button>
+                <div class="calculator__result">
+                    <textarea readonly id="subtract_result" class="calculator__textarea__result" wrap='off'></textarea>
+                </div>
+            </li>
+            <li class="calculator__operation">
+                <h2>Matrix Multiply</h2>
+                <div class="calculator__fields">
+                    <textarea id="multiply_field_1" class="calculator__textarea" wrap='off'></textarea>
+                    <span>*</span>
+                    <textarea id="multiply_field_2" class="calculator__textarea" wrap='off'></textarea>
+                </div>
+                <button data-operation="MULTIPLY" class="calculator__btn">Calculate</button>
+                <div class="calculator__result">
+                    <textarea readonly id="multiply_result" class="calculator__textarea__result" wrap='off'></textarea>
+                </div>
+            </li>
+            <li class="calculator__operation">
+                <h2>Matrix Multiply By Number</h2>
+                <div class="calculator__fields">
+                    <textarea id="multiply_by_field_1" class="calculator__textarea" wrap='off'></textarea>
+                    <span>*</span>
+                    <input id="multiply_by_field_2" type="number" class="calculator__textarea"/>
+                </div>
+                <button data-operation="MULTIPLY_BY" class="calculator__btn">Calculate</button>
+                <div class="calculator__result">
+                    <textarea readonly id="multiply_by_result" class="calculator__textarea__result" wrap='off'></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

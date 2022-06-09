@@ -8,10 +8,11 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: path.resolve(__dirname, 'src', 'index.js'),
+    matrix_worker: path.resolve(__dirname, 'src', 'matrix_worker.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    filename: '[name].js',
   },
   plugins: [
     new webpack.ProgressPlugin(),
@@ -19,6 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin(
         {
           template: path.resolve(__dirname, 'src', 'index.html'),
+          chunks: ['index']
         },
     ),
   ],

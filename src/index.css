@@ -6,38 +6,59 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(226, 40%, 65%);
 }
 
-user-pagination {
+.calculator {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  width: 500px;
+  margin: 30px auto;
+}
+
+.calculator__result {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator__btn {
+  border: 1px solid rgb(151, 151, 238);
+  background: transparent;
   padding: 10px;
-  border: 1px solid #EFEFEF;
-}
-
-user-pagination a {
-  display: block;
-  cursor: pointer;
-  color: rgba(0,0,0,.8);
-  transition: .4s color ease;
-  padding: 2px;
-  border: 2px solid transparent;
-  text-decoration: none;
-}
-
-user-pagination a:hover ,
-user-pagination a.active{
-  font-weight: bold;
-  color: rgba(0,0,0,1);
-  border-bottom-color: black;
-}
-
-user-grid {
+  margin: 10px auto;
   display: block;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
+.calculator__textarea__result {
+  margin: 10px auto 0px;
+  width: 40%;
+  min-height: 40px;
+  resize: vertical;
+  overflow: scroll;
+  font-size: 1rem;
+}
+
+.calculator__operations {
+  list-style: none;
+}
+
+.calculator__operation {
+  padding: 10px 0px;  
+}
+
+.calculator__fields {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator__textarea {
+  width: 40%;
+  min-height: 40px;
+  resize: vertical;
+  overflow: scroll;
+  font-size: 1rem;
 }
