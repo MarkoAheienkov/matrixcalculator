@@ -8,7 +8,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: path.resolve(__dirname, 'src', 'index.js'),
-    sw: path.resolve(__dirname, 'src', 'sw.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,22 +21,6 @@ module.exports = {
           template: path.resolve(__dirname, 'src', 'index.html'),
         },
     ),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src', 'manifest.json'),
-          to: path.resolve(__dirname, 'dist', 'manifest.json'),
-        },
-        {
-          from: path.resolve(__dirname, 'src', 'assets', 'grid-512.ico'),
-          to: path.resolve(__dirname, 'dist', 'icons', 'grid-512.ico'),
-        },
-        {
-          from: path.resolve(__dirname, 'src', 'assets', 'grid-256.ico'),
-          to: path.resolve(__dirname, 'dist', 'icons', 'grid-256.ico'),
-        },
-      ],
-    }),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
